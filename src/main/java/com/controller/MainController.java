@@ -9,15 +9,15 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class MainController {
 
-    @RequestMapping("/permission/{userName}")
-    @PreAuthorize("#permissions.canRead(#userName)")
-    public boolean getPermissionRead(@PathVariable @P("userName") String userName){
+    @RequestMapping("/permission/read/{userName}")
+    @PreAuthorize("#SecurityMethods.canRead(#userName)")
+    public boolean readPermission(@PathVariable @P("userName") String userName){
         return userName.equals("admin");
     }
 
-    @RequestMapping("/permission/{userName}")
-    @PreAuthorize("#permissions.canWrite(#userName)")
-    public boolean getPermissionWrite(@PathVariable @P("userName") String userName){
+    @RequestMapping("/permission/write/{userName}")
+    @PreAuthorize("#SecurityMethods.canWrite(#userName)")
+    public boolean writePermission(@PathVariable @P("userName") String userName){
         return userName.equals("admin");
     }
 

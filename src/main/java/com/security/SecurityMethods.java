@@ -5,10 +5,8 @@ import org.springframework.security.core.context.SecurityContextHolder;
 
 public class SecurityMethods {
 
-
     Authentication authentication = (Authentication) SecurityContextHolder.getContext().getAuthentication();
     String currentPrincipalName = authentication.getUsername();
-
 
     public boolean canRead(String currentPrincipalName) {
         return currentPrincipalName.equals("admin");
