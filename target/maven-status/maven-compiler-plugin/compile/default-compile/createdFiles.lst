@@ -1,0 +1,7 @@
+app\security\CustomMethodSecurityExpressionRoot.class
+app\PermissionEvaluator.class
+app\security\MethodSecurityConfig.class
+app\controller\MainController.class
+app\security\SecurityConfiguration.class
+app\security\SecurityMethods.class
+app\security\CustomMethodSecurityExpressionHandler.class
